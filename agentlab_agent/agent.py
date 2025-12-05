@@ -30,8 +30,3 @@ root_agent = Agent(
     instruction='Answer user questions to the best of your knowledge',
     tools=[search_papers],
 )
-
-if __name__ == '__main__':
-    query = "Find papers about policy gradients and large language models and transformers and graph neural networks"
-    response = root_agent.chat(query)
-    print(response)

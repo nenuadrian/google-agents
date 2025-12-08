@@ -90,7 +90,7 @@
             <div class="card-body">
               <ul class="list-unstyled mb-0">
                 <li><strong>Topic:</strong> Building Agentic Architectures</li>
-                <li><strong>Format:</strong> Short intro + live coding + mini-hack</li>
+                <li><strong>Format:</strong> Short intro + live coding + mini-hackathon</li>
                 <li><strong>Requirements:</strong> Laptop, Google account, basic shell &amp; Python</li>
                 <li><strong>Outcome:</strong> Leave with a working agentic project</li>
               </ul>
@@ -141,7 +141,6 @@
     </div>
   </section>
 
-  <!-- Gemini CLI -->
   <section id="gemini-cli" class="section bg-light">
     <div class="container">
       <h2 class="mb-4">Gemini CLI: What &amp; Why</h2>
@@ -213,45 +212,36 @@ gemini</code></pre>
 
   <section id="ink" class="section">
     <div class="container">
-      <h2 class="mb-4">Gemini CLI: How was it made?</h2>
-      <div class="row gy-4">
-        <div class="col-lg-7">
-          <p>
-            Very quickly! Within a few weeks, and in development since then.
-          </p>
-          <a href="https://github.com/google-gemini/gemini-cli" target="_blank" class="btn btn-outline-primary btn-lg">
-            Gemini CLI GitHub Repository
-          </a>
-          <br />
-          <br />
-          <p>
-            It is based on, alongside the Google AI APIs, on the following React framework for building beautiful
-            terminal tool experiences:
-          </p>
-
-          <a href="https://github.com/vadimdemedes/ink" target="_blank" class="btn btn-outline-primary btn-lg">
-            ink GitHub Repository
-          </a>
-        </div>
-
-        <div class="col-lg-5">
+      <h2 class="mb-4">AI Research Assistant</h2>
+      <div class="row gy-4">     
+        <div class="col-lg-8">
           <div class="card h-100">
             <div class="card-header">
               Example commands
             </div>
             <div class="card-body">
-              <pre class="mb-3"><code># Dependencies
-npm install ink react
+              <pre class="mb-3"><code># Python Env
+python -m venv .venv
+source .venv/bin/activate
 
-# Create base app
-npx create-ink-app my-ink-cli
+# OR Conda - feel free to use anything, e.g. Poetry, Pipenv, etc.
+conda create -n agents python=3.11 -y
+conda activate agents
 
-# Create base app in TypeScript
-npx create-ink-app --typescript my-ink-cli</code></pre>
+# Create an API key on https://aistudio.google.com/api-keys
+
+# Create base project: gemini-2.5-flash, Google AI Studio, provide the Key
+adk create adk-research-assistant</code></pre>
             </div>
           </div>
         </div>
-
+        <div class="col-lg-8">
+          <p>500 requests / day limit on Free tier.</p>
+           <a href="https://aistudio.google.com/api-keys" target="_blank"
+            class="btn btn-outline-primary btn-lg">
+            Google AI Studio
+          </a>
+        </div>
       </div>
     </div>
   </section>

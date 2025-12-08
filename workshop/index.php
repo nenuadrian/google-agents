@@ -241,6 +241,8 @@ adk run adk_research_assistant
       <div class="row gy-4">
         <div class="col-lg-8">
           <p>We will use the arXiv API to gather research papers related to your query.</p>
+        </div>
+        <div class="col-lg-8">
           <div class="card">
             <div class="card-header">
               arxiv_agent.py

@@ -51,13 +51,7 @@
             <a class="nav-link" href="#presenter">Presenter</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#gemini-cli">Gemini CLI</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#ink">Ink</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="#steps">Steps</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#present">Showcase</a>
@@ -141,78 +135,10 @@
     </div>
   </section>
 
-  <section id="gemini-cli" class="section bg-light">
+
+  <section class="section bg-light" id="steps">
     <div class="container">
-      <h2 class="mb-4">Gemini CLI: What &amp; Why</h2>
-      <div class="row gy-4">
-        <div class="col-lg-7">
-          <p>
-            Gemini CLI is a command-line interface for interacting with Gemini models
-            directly from your terminal. It turns LLM interactions into shell-friendly
-            primitives, so you can:
-          </p>
-          <ul>
-            <li>Create a GEMINI.md file to fine-tune goals</li>
-            <li>Generate and refine code inline while you hack</li>
-            <li>Summarise or transform files without leaving the shell</li>
-            <li>Wire Gemini into scripts, Makefiles, and small tools</li>
-          </ul>
-
-          <h5 class="mt-4">Typical workflow</h5>
-
-          <ol>
-            <li>Install the CLI and authenticate with your Google account</li>
-            <li>Set your default model and project</li>
-            <li>Use simple commands like <code>gemini ask</code> or <code>gemini generate</code></li>
-            <li>Understand MCP extensions</li>
-          </ol>
-          <Br /><br />
-          <a href="https://github.com/google-gemini/gemini-cli" target="_blank" class="btn btn-outline-primary btn-lg">
-            Gemini CLI GitHub Repository
-          </a>
-
-          <a href="https://geminicli.com/docs/architecture/" target="_blank" class="btn btn-outline-primary btn-lg">
-            Gemini CLI Architecture
-          </a>
-          <a href="https://google-gemini.github.io/gemini-cli/docs/tools/mcp-server.html" target="_blank"
-            class="btn btn-outline-primary btn-lg">
-            Gemini CLI MCP
-          </a>
-
-        </div>
-
-        <div class="col-lg-5">
-          <div class="card h-100">
-            <div class="card-header">
-              Example commands
-            </div>
-            <div class="card-body">
-              <pre class="mb-3"><code># Ask a quick question
-gemini ask "Explain Gemini CLI in one paragraph"
-
-# Summarise a file
-gemini file summarize README.md
-
-# Generate starter code
-gemini code "Python script for a text-based quiz game"
-
-# Enter full mode
-gemini</code></pre>
-              <p class="mb-0">
-                During the workshop we’ll use commands like these as building
-                blocks for the project ideas below.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="ink" class="section">
-    <div class="container">
-      <h2 class="mb-4">AI Research Assistant</h2>
+      <h2 class="mb-4">Base Agent</h2>
       <div class="row gy-4">     
         <div class="col-lg-8">
           <div class="card h-100">
@@ -230,99 +156,363 @@ conda activate agents
 
 # Create an API key on https://aistudio.google.com/api-keys
 
-# Create base project: gemini-2.5-flash, Google AI Studio, provide the Key
-adk create adk-research-assistant</code></pre>
+# Create base project: 1) gemini-2.5-flash, 1) Google AI Studio, provide the Key
+adk create adk_research_assistant
+
+adk run adk_research_assistant
+</code></pre>
             </div>
           </div>
         </div>
         <div class="col-lg-4">
           <p>500 requests / day limit on Free tier.</p>
-           <a href="https://aistudio.google.com/api-keys" target="_blank"
+          <a href="https://aistudio.google.com/api-keys" target="_blank"
             class="btn btn-outline-primary btn-lg">
             Google AI Studio
+          </a>
+          <a href="https://google.github.io/adk-docs/get-started/python/" target="_blank"
+            class="btn btn-outline-primary btn-lg">
+            ADK Docs - Python Getting Started
           </a>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Proposed Projects -->
-  <section id="projects" class="section bg-light" class="section">
+  <section class="section">
     <div class="container">
-      <h2 class="mb-4">Proposed Projects</h2>
-      <p class="mb-4">
-        To make things concrete, here are three project ideas you can build during the session.
-        They’re intentionally small but composable, so you can extend them after the workshop.
-      </p>
-
-      <div class="row gy-4">
-        <div class="col-md-4">
+      <h2 class="mb-4">arXiv Agent</h2>
+      <div class="row gy-4">     
+        <div class="col-lg-8">
           <div class="card h-100">
             <div class="card-header">
-              1. Gemini Quiz Adventure (Game)
+              arxiv_agent.py
             </div>
-            <div class="card-body d-flex flex-column">
-              <p>
-                A terminal-based story and quiz game. Gemini generates narrative
-                branches, riddles, and adaptive hints based on the player’s answers.
-              </p>
-              <ul>
-                <li>Use Gemini CLI to generate questions and story events</li>
-                <li>Track player state (score, progress, difficulty)</li>
-                <li>Optionally log game transcripts for later analysis</li>
-              </ul>
-              <p class="mt-auto mb-0">
-                Stretch goal: add a “lore mode” where Gemini expands the world based
-                on previous runs.
-              </p>
+            <div class="card-body">
+              <pre class="mb-3"><code>import os
+
+from datetime import datetime
+from typing import Dict, List, Literal, TypedDict
+
+import arxiv
+from google.adk.agents.llm_agent import Agent
+from google.adk.tools import FunctionTool
+
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+
+
+class ArxivPaper(TypedDict):
+    title: str
+    authors: List[str]
+    year: int
+    arxiv_id: str
+    url: str
+    summary: str
+    topic: str
+
+
+def _build_arxiv_query_string(topics: List[str]) -> str:
+    """Build an arXiv API query string from a list of topics.
+
+    We keep this simple and AND the topic phrases together.
+    """
+
+    cleaned = [t.strip() for t in topics if t.strip()]
+    if not cleaned:
+        raise ValueError("At least one topic is required")
+
+    # Example: "(ti:\"graph neural networks\" OR abs:\"graph neural networks\")"
+    parts = []
+    for t in cleaned:
+        phrase = t.replace('"', '"')
+        parts.append(f'(ti:"{phrase}" OR abs:"{phrase}")')
+
+    return " AND ".join(parts)
+
+
+def search_arxiv_with_client(
+    topics: List[str],
+    *,
+    max_results: int = 10,
+    sort_by: Literal[
+        "relevance",
+        "lastUpdatedDate",
+        "submittedDate",
+    ] = "submittedDate",
+) -> List[ArxivPaper]:
+    """Use the `arxiv` Python client to fetch recent papers.
+
+    This is a low-level utility that the LLM agent can call via tool usage,
+    or that you can call directly from Python.
+    """
+
+    query = _build_arxiv_query_string(topics)
+
+    sort_criterion_map: Dict[str, arxiv.SortCriterion] = {
+        "relevance": arxiv.SortCriterion.Relevance,
+        "lastUpdatedDate": arxiv.SortCriterion.LastUpdatedDate,
+        "submittedDate": arxiv.SortCriterion.SubmittedDate,
+    }
+
+    search = arxiv.Search(
+        query=query,
+        max_results=max_results,
+        sort_by=sort_criterion_map[sort_by],
+    )
+
+    client = arxiv.Client()
+
+    papers: List[ArxivPaper] = []
+    for result in client.results(search):
+        year = result.published.year if result.published else datetime.utcnow().year
+        papers.append(
+            ArxivPaper(
+                title=result.title,
+                authors=[a.name for a in result.authors],
+                year=year,
+                arxiv_id=result.get_short_id(),
+                url=result.entry_id,
+                summary=result.summary,
+                topic=", ".join(topics),
+            )
+        )
+
+    return papers
+
+
+search_arxiv_with_client_tool = FunctionTool(func=search_arxiv_with_client)
+
+arxiv_research_agent = Agent(
+    model=GEMINI_MODEL,
+    name="arxiv_research_agent",
+    description=(
+        "Sub-agent that can call a custom arXiv search tool "
+        "to find recent papers for given research topics."
+    ),
+    instruction=(
+        "You are an academic research assistant specialized in searching arXiv. "
+        "You have access to a Python tool `search_arxiv_with_client(topics, "
+        "max_results, sort_by)` that returns structured paper metadata. "
+        "Given a list of topics, decide sensible values for max_results and "
+        "sort_by (defaulting to recent submissions), call the tool, and then "
+        "format the results as a concise list including: title, authors, year, "
+        "arXiv ID, URL, and a 1–2 sentence summary for each paper. Group by "
+        "topic where helpful. Get 50 papers."
+    ),
+    tools=[search_arxiv_with_client_tool],
+    output_key="arxiv_research_result",
+)</code></pre>
             </div>
           </div>
         </div>
-
-        <div class="col-md-4">
+        <div class="col-lg-4">
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="mb-4">Email Agent</h2>
+      <div class="row gy-4">     
+        <div class="col-lg-8">
           <div class="card h-100">
             <div class="card-header">
-              2. Project &amp; Docs Copilot
+             email_agent.py
             </div>
-            <div class="card-body d-flex flex-column">
-              <p>
-                A CLI helper that lets you ask questions about local project files
-                and documentation.
-              </p>
-              <ul>
-                <li>Command to select a folder / repo</li>
-                <li>Use Gemini CLI to summarise and explain key files</li>
-                <li>Simple Q&amp;A mode: <code>./docbot "How do I run tests?"</code></li>
-              </ul>
-              <p class="mt-auto mb-0">
-                Stretch goal: auto-generate onboarding docs for new contributors.
-              </p>
+            <div class="card-body">
+              <pre class="mb-3"><code>import os
+from dataclasses import dataclass
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+
+import smtplib
+
+from google.adk.agents.llm_agent import Agent
+from google.adk.tools import FunctionTool
+
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+
+SMTP_DEFAULT_PORT = int(os.getenv("SMTP_DEFAULT_PORT", 587))
+SMTP_HOST = os.getenv("SMTP_HOST")
+SMTP_USERNAME = os.getenv("SMTP_USERNAME")
+SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
+FROM_ADDR = os.getenv("FROM_ADDR")
+TO_ADDR = os.getenv("TO_ADDR")
+
+
+@dataclass
+class EmailConfig:
+    smtp_host: str
+    smtp_port: int
+    username: str
+    password: str
+    use_tls: bool = True
+
+
+def _send_html_email(
+    config: EmailConfig,
+    *,
+    subject: str,
+    html_body: str,
+) -> None:
+    """Low-level helper to send an HTML email via SMTP."""
+
+    msg = MIMEMultipart("alternative")
+    msg["Subject"] = subject
+    msg["From"] = FROM_ADDR
+    msg["To"] = TO_ADDR
+
+    msg.attach(MIMEText(html_body, "html"))
+
+    with smtplib.SMTP(config.smtp_host, config.smtp_port) as server:
+        if config.use_tls:
+            server.starttls()
+        if config.username and config.password:
+            server.login(config.username, config.password)
+        server.sendmail(FROM_ADDR, [TO_ADDR], msg.as_string())
+
+
+def send_research_email(
+    *,
+    subject: str,
+    html_body: str,
+) -> str:
+    """Sends an HTML email with the given subject and body."""
+
+    if not SMTP_HOST:
+        return (
+            "Preview only; email not sent.\n"
+            f"From: {FROM_ADDR}\n"
+            f"To: {TO_ADDR}\n"
+            f"Subject: {subject}\n"
+            f"HTML Body:\n{html_body}"
+        )
+
+    config = EmailConfig(
+        smtp_host=SMTP_HOST,
+        smtp_port=SMTP_DEFAULT_PORT,
+        username=SMTP_USERNAME,
+        password=SMTP_PASSWORD,
+    )
+
+    _send_html_email(
+        config,
+        subject=subject,
+        html_body=html_body,
+    )
+
+    return "Email sent successfully."
+
+
+send_research_email_tool = FunctionTool(func=send_research_email)
+
+email_agent = Agent(
+    model=GEMINI_MODEL,
+    name="email_body_generator",
+    description="Generates clean, readable HTML emails from instructions.",
+    instruction=(
+        "You are an assistant that writes professional, accessible HTML "
+        "emails. Given a set of instructions, produce a complete HTML "
+        "document suitable for the email body. Use semantic tags (h1, h2, "
+        "p, ul/li) and inline styles only where necessary. Do not include "
+        "external CSS or scripts."
+        "Create an HTML beautiful stylized email body with the following requirements. Ensure to add a frame, header, footer, relevant to the topic of the content."
+        "Do not include the <html> or <body> tags, only the inner content. Use the send_research_email_tool tool to send the email."
+    ),
+    tools=[send_research_email_tool],
+)</code></pre>
             </div>
           </div>
         </div>
-
-        <div class="col-md-4">
+        <div class="col-lg-4">
+          <a href="https://www.mailersend.com/" target="_blank"
+            class="btn btn-outline-primary btn-lg">
+            Create MailerSend Account
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="mb-4">Bring it all together</h2>
+      <div class="row gy-4">     
+        <div class="col-lg-12">
           <div class="card h-100">
             <div class="card-header">
-              3. Lightweight Code Reviewer
+              agent.py
             </div>
-            <div class="card-body d-flex flex-column">
-              <p>
-                A small script that sends code snippets or diffs to Gemini and
-                returns focused review comments.
-              </p>
-              <ul>
-                <li>Command to pipe git diff into Gemini CLI</li>
-                <li>Configurable “review profile” (strict, fast, beginner-friendly)</li>
-                <li>Optional JSON output for integration with CI</li>
-              </ul>
-              <p class="mt-auto mb-0">
-                Stretch goal: generate suggested patches you can apply directly.
-              </p>
+            <div class="card-body"> 
+              <pre class="mb-3"><code>import os
+from google.adk.agents.sequential_agent import SequentialAgent
+from google.adk.agents.parallel_agent import ParallelAgent
+from google.adk.agents.llm_agent import LlmAgent
+from google.adk.tools import google_search
+
+from arxiv_agent import arxiv_research_agent
+from email_agent import email_agent
+
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+
+
+google_agent = LlmAgent(
+    name="GoogleSearchResearchAgent",
+    model=GEMINI_MODEL,
+    instruction="""You are an AI Research Assistant.
+Use the Google Search tool provided.
+Summarize your key findings concisely (1-2 sentences).
+Output *only* the summary.
+""",
+    description="Researches using Google.",
+    tools=[google_search],
+    # Store result in state for the merger agent
+    output_key="google_research_result",
+)
+
+parallel_research_agent = ParallelAgent(
+    name="ParallelWebResearchAgent",
+    sub_agents=[google_agent, arxiv_research_agent],
+    description="Runs multiple research agents in parallel to gather information.",
+)
+
+merger_agent = LlmAgent(
+    name="MergeSynthesisAgent",
+    model=GEMINI_MODEL,
+    instruction="""You are an AI Assistant responsible for combining research findings into a structured report.
+
+ Your primary task is to synthesize the following research summaries, clearly attributing findings to their source areas. Structure your response using headings for each topic. Ensure the report is coherent and integrates the key points smoothly.
+
+ **Crucially: Your entire response MUST be grounded *exclusively* on the information provided in the 'Input Summaries' below. Do NOT add any external knowledge, facts, or details not present in these specific summaries.**
+
+ **Research:**
+
+ *   **Google Search Results:**
+     {google_research_result}
+
+ *   **arXiv Papers:**
+     {arxiv_research_result}
+
+ **Output Format:**
+
+ Output *only* the structured report following this format. Do not include introductory or concluding phrases outside this structure, and strictly adhere to using only the provided input summary content.
+ 
+ Respond also with a suggested email subject line that encapsulates the report's content.
+ """,
+    description="Combines research findings from parallel agents into a structured, cited report, strictly grounded on provided inputs.",
+)
+
+sequential_pipeline_agent = SequentialAgent(
+    name="ResearchAndSynthesisPipeline",
+    sub_agents=[parallel_research_agent, merger_agent, email_agent],
+    description="Coordinates parallel research and synthesizes the results.",
+)
+
+
+root_agent = sequential_pipeline_agent
+</code></pre>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>

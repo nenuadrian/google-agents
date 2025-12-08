@@ -1,6 +1,6 @@
 # Research assistant
 
-[![Python Build](https://github.com/nenuadrian/google-agents/actions/workflows/python-package-conda.yml/badge.svg)](https://github.com/nenuadrian/google-agents/actions/workflows/python-package.yml)
+[![Python Build](https://github.com/nenuadrian/google-agents/actions/workflows/python-package.yml/badge.svg)](https://github.com/nenuadrian/google-agents/actions/workflows/python-package.yml)
 
 https://nenuadrian.com/uom/gdg/2025/workshop/
 

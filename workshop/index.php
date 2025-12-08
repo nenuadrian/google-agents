@@ -79,6 +79,8 @@
             class="btn btn-outline-primary btn-lg">
             GitHub Repository
           </a>
+          <br/><br/>
+          <h3>nenuadrian.com/uom/gdg/2025/workshop</h3>
         </div>
         <div class="col-lg-5">
           <div class="card">

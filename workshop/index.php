@@ -180,12 +180,12 @@
 
   <section class="section bg-light" id="steps">
     <div class="container">
-      <h2 class="mb-4">Base Agent</h2>
+      <h2 class="mb-4">Step I: Base Agent</h2>
       <div class="row gy-4">
         <div class="col-lg-8">
           <div class="card h-100">
             <div class="card-header">
-              Example commands
+              Kick off
             </div>
             <div class="card-body">
               <pre class="mb-3"><code># Python Env
@@ -231,9 +231,10 @@ adk run adk_research_assistant
   </section>
   <section class="section">
     <div class="container">
-      <h2 class="mb-4">arXiv Agent</h2>
+      <h2 class="mb-4">Step II: arXiv Agent</h2>
       <div class="row gy-4">
         <div class="col-lg-8">
+          <p>We will use the arXiv API to gather research papers related to your query.</p>
           <div class="card h-100">
             <div class="card-header">
               arxiv_agent.py
@@ -258,10 +259,12 @@ adk run adk_research_assistant
   </section>
   <section class="section bg-light">
     <div class="container">
-      <h2 class="mb-4">Email Agent</h2>
+      <h2 class="mb-4">Step III: Email Agent</h2>
       <div class="row gy-4">
         <div class="col-lg-8">
-          <p>We need to make an account for another set of credentials that will allow us to send emails via SMTP.</p>
+          <p>We will use MailerSend to send emails with the research report.</p>
+          <p>Make an account on <a href="https://www.mailersend.com/" target="_blank">mailersend.com</a>, get SMTP
+            credentials.
           <div class="card h-100">
             <div class="card-header">
               email_agent.py
@@ -310,6 +313,8 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
       <h2 class="mb-4">Bring it all together</h2>
       <div class="row gy-4">
         <div class="col-lg-12">
+          <p>This is where we combine all the agents to create a seamless research assistant workflow.</p>
+          <p>We will use the Google Search and arXiv agents to gather information, then merge and email the results.</p>
           <div class="card h-100">
             <div class="card-header">
               agent.py
@@ -324,7 +329,7 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
   </section>
   <section id="present" class="section bg-light">
     <div class="container">
-      <h2 class="mb-4">Present your work!</h2>
+      <h2 class="mb-4">Present your work?!</h2>
       <div class="row gy-4">
         <div class="col-lg-12">
           <p>
@@ -354,9 +359,6 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
     integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"

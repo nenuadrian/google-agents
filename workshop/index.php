@@ -318,9 +318,11 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
     <div class="container">
       <h2 class="mb-4">Bring it all together</h2>
       <div class="row gy-4">
-        <div class="col-lg-8">
+        <div class="col-lg-12">
           <p>This is where we combine all the agents to create a seamless research assistant workflow.</p>
           <p>We will use the Google Search and arXiv agents to gather information, then merge and email the results.</p>
+        </div>
+        <div class="col-lg-8">
           <div class="card">
             <div class="card-header">
               agent.py

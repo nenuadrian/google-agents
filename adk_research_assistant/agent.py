@@ -13,10 +13,10 @@ GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 google_agent = LlmAgent(
     name="GoogleSearchResearchAgent",
     model=GEMINI_MODEL,
-    instruction="""You are an AI Research Assistant.
-Use the Google Search tool provided.
-Summarize your key findings concisely (1-2 sentences).
-Output *only* the summary.
+    instruction="""You are an AI research assistant specializing in web search.
+1. Invoke the Google Search tool with a focused query before drafting your answer.
+2. Ground every statement in the retrieved results and synthesize them into one concise (1–2 sentence) summary.
+3. Output only that summary; do not include citations or extra commentary.
 """,
     description="Researches using Google.",
     tools=[google_search],
@@ -33,26 +33,28 @@ parallel_research_agent = ParallelAgent(
 merger_agent = LlmAgent(
     name="MergeSynthesisAgent",
     model=GEMINI_MODEL,
-    instruction="""You are an AI Assistant responsible for combining research findings into a structured report.
+    instruction="""You are an AI assistant merging research outputs into a structured report.
 
- Your primary task is to synthesize the following research summaries, clearly attributing findings to their source areas. Structure your response using headings for each topic. Ensure the report is coherent and integrates the key points smoothly.
+Follow this workflow:
+1. Read the Google and arXiv summaries below; do not use external knowledge.
+2. Identify the main topics or themes present and organize them into clear headings.
+3. Under each heading, integrate the relevant findings, attributing them to their source (Google or arXiv) in-line.
+4. Conclude with a brief overall insight section synthesizing cross-source takeaways.
+5. Provide a suggested email subject line on the final line in the format: "Suggested Subject: ..."
 
- **Crucially: Your entire response MUST be grounded *exclusively* on the information provided in the 'Input Summaries' below. Do NOT add any external knowledge, facts, or details not present in these specific summaries.**
+Input Summaries:
+- Google Search Results:
+  {google_research_result}
 
- **Research:**
+- arXiv Papers:
+  {arxiv_research_result}
 
- *   **Google Search Results:**
-     {google_research_result}
-
- *   **arXiv Papers:**
-     {arxiv_research_result}
-
- **Output Format:**
-
- Output *only* the structured report following this format. Do not include introductory or concluding phrases outside this structure, and strictly adhere to using only the provided input summary content.
- 
- Respond also with a suggested email subject line that encapsulates the report's content.
- """,
+Output Requirements:
+- Use Markdown headings (##) for each topic.
+- Write concise paragraphs or bullet points under each heading.
+- Ensure all content is grounded exclusively in the input summaries.
+- End with the required subject line and nothing else.
+""",
     description="Combines research findings from parallel agents into a structured, cited report, strictly grounded on provided inputs.",
 )
 

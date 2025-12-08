@@ -177,6 +177,15 @@ adk run adk_research_assistant
             class="btn btn-outline-primary btn-lg">
             ADK Docs - Python Getting Started
           </a>
+          <br/>
+          <div class="card">
+            <div class="card-header">
+              Add to .env
+            </div>
+            <div class="card-body">
+              <pre class="mb-3"><code>GEMINI_MODEL=gemini-2.5-flash-preview-09-2025</code></pre>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -308,7 +317,14 @@ arxiv_research_agent = Agent(
           </div>
         </div>
         <div class="col-lg-4">
-          
+          <div class="card">
+            <div class="card-header">
+              Dependencies
+            </div>
+            <div class="card-body">
+              <pre class="mb-3"><code>pip install arxiv</code></pre>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -429,6 +445,14 @@ email_agent = Agent(
           </div>
         </div>
         <div class="col-lg-4">
+          <div class="card">
+            <div class="card-header">
+              Dependencies
+            </div>
+            <div class="card-body">
+              <pre class="mb-3"><code>pip install secure-smtplib</code></pre>
+            </div>
+          </div>
           <a href="https://www.mailersend.com/" target="_blank"
             class="btn btn-outline-primary btn-lg">
             Create MailerSend Account
@@ -438,7 +462,7 @@ email_agent = Agent(
           <p>Once you have made an account, update your .env file to contain:</p>
           <div class="card">
             <div class="card-header">
-             email_agent.py
+             Append to .env
             </div>
             <div class="card-body">
               <pre class="mb-3"><code>SMTP_DEFAULT_PORT=587

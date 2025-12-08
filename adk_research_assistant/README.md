@@ -4,6 +4,59 @@ https://nenuadrian.com/uom/gdg/2025/workshop/
 
 ![image](./assets/example.png)
 
+## Agent Interaction and Data Flow
+
+The research assistant operates as a sequential pipeline, orchestrating multiple agents to gather, synthesize, and deliver research information.
+
+```ascii
++-----------------------------+
+| (START)                     |
+|  sequential_pipeline_agent  |
++--------------+--------------+
+               |
+               v
++-----------------------------+
+| Step 1: parallel_research_agent |
++--------------+--------------+
+               |
+  +------------+------------+
+  |                         |
+  v                         v
++-----------------+     +----------------------+
+|  google_agent   |     | arxiv_research_agent |
++-----------------+     +----------------------+
+  |       |                 |        |
+  |       v                 |        v
+  | [ Google Search ]       |  [ arXiv API ]
+  |                         |
+  | "google_research_result"| "arxiv_research_result"
+  |                         |
+  +------------+------------+
+               |
+               v
++-----------------------------+
+| Step 2:      merger_agent     |
++-----------------------------+
+               |
+               | (Synthesizes results)
+               | "Synthesized Report & Subject"
+               v
++-----------------------------+
+| Step 3:      email_agent      |
++-----------------------------+
+               |
+               | (Generates & sends HTML email)
+               v
++-----------------------------+
+|        [ SMTP Server ]        |
++-----------------------------+
+               |
+               v
++-----------------------------+
+|       (END) User's Inbox      |
++-----------------------------+
+```
+
 ## Install
 
 ```bash

@@ -1,6 +1,8 @@
 # Research assistant
 
 
+![image](./assets/example.png)
+
 ## Install
 
 ```bash

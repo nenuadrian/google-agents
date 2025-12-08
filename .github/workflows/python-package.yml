@@ -19,5 +19,5 @@ jobs:
         echo $CONDA/bin >> $GITHUB_PATH
     - name: Install dependencies
       run: |
-        cd adk_research_assistant && pip install
+        cd adk_research_assistant && pip install -r requirements.txt
     

@@ -80,18 +80,59 @@
           </a>
         </div>
         <div class="col-lg-5">
-          <div class="card shadow-sm">
+          <div class="card">
             <div class="card-header">
-              Workshop snapshot
+              Goal
             </div>
             <div class="card-body">
-              <ul class="list-unstyled mb-0">
-                <li><strong>Topic:</strong> Building Agentic Architectures</li>
-                <li><strong>Format:</strong> Short intro + live coding + mini-hackathon</li>
-                <li><strong>Requirements:</strong> Laptop, Google account, basic shell &amp; Python</li>
-                <li><strong>Outcome:</strong> Leave with a working agentic project</li>
-              </ul>
-            </div>
+              <div class="text-monospace">
+                <pre><code>+-----------------------------+
+| (START)                     |
+|  sequential_pipeline_agent  |
++--------------+--------------+
+               |
+               v
++-----------------------------+
+| Step 1: parallel_research_agent |
++--------------+--------------+
+               |
+  +------------+------------+
+  |                         |
+  v                         v
++-----------------+     +----------------------+
+|  google_agent   |     | arxiv_research_agent |
++-----------------+     +----------------------+
+  |       |                 |        |
+  |       v                 |        v
+  | [ Google Search ]       |  [ arXiv API ]
+  |                         |
+  | "google_research_result"| "arxiv_research_result"
+  |                         |
+  +------------+------------+
+               |
+               v
++-----------------------------+
+| Step 2:      merger_agent     |
++-----------------------------+
+               |
+               | (Synthesizes results)
+               | "Synthesized Report & Subject"
+               v
++-----------------------------+
+| Step 3:      email_agent      |
++-----------------------------+
+               |
+               | (Generates & sends HTML email)
+               v
++-----------------------------+
+|        [ SMTP Server ]        |
++-----------------------------+
+               |
+               v
++-----------------------------+
+|       (END) User's Inbox      |
++-----------------------------+</code></pre>
+              </div>
           </div>
         </div>
       </div>

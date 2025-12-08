@@ -1,5 +1,6 @@
 # Research assistant
 
+https://nenuadrian.com/uom/gdg/2025/workshop/
 
 ![image](./assets/example.png)
 

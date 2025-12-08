@@ -82,8 +82,8 @@
             class="btn btn-outline-primary btn-lg">
             GitHub Repository
           </a>
-          <br/><br/>
-          <br/><br/>
+          <br /><br />
+          <br /><br />
           <h2>nenuadrian.com/uom/gdg/2025/workshop</h2>
         </div>
         <div class="col-lg-5">
@@ -267,10 +267,12 @@ adk run adk_research_assistant
     <div class="container">
       <h2 class="mb-4">Step III: Email Agent</h2>
       <div class="row gy-4">
-        <div class="col-lg-8">
+        <div class="col-lg-12">
           <p>We will use MailerSend to send emails with the research report.</p>
           <p>Make an account on <a href="https://www.mailersend.com/" target="_blank">mailersend.com</a>, get SMTP
-            credentials.
+            credentials.</p>
+        </div>
+        <div class="col-lg-8">
           <div class="card">
             <div class="card-header">
               email_agent.py

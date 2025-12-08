@@ -26,14 +26,14 @@ def _build_arxiv_query_string(topics: List[str]) -> str:
     We keep this simple and AND the topic phrases together.
     """
 
-    cleaned = [t.strip() for t in topics if t.strip()]
+    cleaned = list(dict.fromkeys(t.strip() for t in topics if t.strip()))
     if not cleaned:
         raise ValueError("At least one topic is required")
 
     # Example: "(ti:\"graph neural networks\" OR abs:\"graph neural networks\")"
     parts = []
     for t in cleaned:
-        phrase = t.replace('"', '"')
+        phrase = t.replace('"', '\\"')
         parts.append(f'(ti:"{phrase}" OR abs:"{phrase}")')
 
     return " AND ".join(parts)
@@ -42,7 +42,7 @@ def _build_arxiv_query_string(topics: List[str]) -> str:
 def search_arxiv_with_client(
     topics: List[str],
     *,
-    max_results: int = 10,
+    max_results: int = 50,
     sort_by: Literal[
         "relevance",
         "lastUpdatedDate",
@@ -99,14 +99,13 @@ arxiv_research_agent = Agent(
         "to find recent papers for given research topics."
     ),
     instruction=(
-        "You are an academic research assistant specialized in searching arXiv. "
-        "You have access to a Python tool `search_arxiv_with_client(topics, "
-        "max_results, sort_by)` that returns structured paper metadata. "
-        "Given a list of topics, decide sensible values for max_results and "
-        "sort_by (defaulting to recent submissions), call the tool, and then "
-        "format the results as a concise list including: title, authors, year, "
-        "arXiv ID, URL, and a 1–2 sentence summary for each paper. Group by "
-        "topic where helpful. Get 50 papers."
+        "Role: academic research assistant specialized in arXiv.\n"
+        "Capabilities: access to search_arxiv_with_client(topics, max_results, sort_by) returning structured paper metadata.\n"
+        "Workflow:\n"
+        "1. Normalize the supplied topics and decide whether to call the tool once or multiple times (e.g., one per topic cluster).\n"
+        "2. Choose max_results (default 50, adjust when many topics) and an appropriate sort order (use submittedDate unless directed otherwise), then call the tool.\n"
+        "3. Merge the results, de-duplicate by arXiv ID, and organize them by topic or theme.\n"
+        "Output: Provide each paper's title, authors, year, arXiv ID, URL, and a 1–2 sentence summary. Conclude with key takeaways or gaps."
     ),
     tools=[search_arxiv_with_client_tool],
     output_key="arxiv_research_result",

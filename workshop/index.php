@@ -83,7 +83,7 @@
             GitHub Repository
           </a>
           <br/><br/>
-          <h4>nenuadrian.com/uom/gdg/2025/workshop</h4>
+          <h2>nenuadrian.com/uom/gdg/2025/workshop</h2>
         </div>
         <div class="col-lg-5">
           <div class="card">

@@ -158,7 +158,7 @@
           </a>
         </div>
         <div class="col-lg-4">
-          <div class="card h-100">
+          <div class="card">
             <div class="card-header">
               Quick bio
             </div>
@@ -183,7 +183,7 @@
       <h2 class="mb-4">Step I: Base Agent</h2>
       <div class="row gy-4">
         <div class="col-lg-8">
-          <div class="card h-100">
+          <div class="card">
             <div class="card-header">
               Kick off
             </div>
@@ -235,7 +235,7 @@ adk run adk_research_assistant
       <div class="row gy-4">
         <div class="col-lg-8">
           <p>We will use the arXiv API to gather research papers related to your query.</p>
-          <div class="card h-100">
+          <div class="card">
             <div class="card-header">
               arxiv_agent.py
             </div>
@@ -265,7 +265,7 @@ adk run adk_research_assistant
           <p>We will use MailerSend to send emails with the research report.</p>
           <p>Make an account on <a href="https://www.mailersend.com/" target="_blank">mailersend.com</a>, get SMTP
             credentials.
-          <div class="card h-100">
+          <div class="card">
             <div class="card-header">
               email_agent.py
             </div>
@@ -315,7 +315,7 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
         <div class="col-lg-12">
           <p>This is where we combine all the agents to create a seamless research assistant workflow.</p>
           <p>We will use the Google Search and arXiv agents to gather information, then merge and email the results.</p>
-          <div class="card h-100">
+          <div class="card">
             <div class="card-header">
               agent.py
             </div>

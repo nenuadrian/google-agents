@@ -329,7 +329,7 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
   </section>
   <section id="present" class="section bg-light">
     <div class="container">
-      <h2 class="mb-4">Present your work?!</h2>
+      <h2 class="mb-4">Step IV: Present your work?!</h2>
       <div class="row gy-4">
         <div class="col-lg-12">
           <p>

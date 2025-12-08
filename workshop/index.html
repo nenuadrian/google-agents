@@ -318,6 +318,7 @@ arxiv_research_agent = Agent(
       <h2 class="mb-4">Email Agent</h2>
       <div class="row gy-4">     
         <div class="col-lg-8">
+          <p>We need to make an account for another set of credentials that will allow us to send emails via SMTP.</p>
           <div class="card h-100">
             <div class="card-header">
              email_agent.py
@@ -432,6 +433,20 @@ email_agent = Agent(
             class="btn btn-outline-primary btn-lg">
             Create MailerSend Account
           </a>
+          <p>Once you have made an account, update your .env file to contain:</p>
+          <div class="card h-100">
+            <div class="card-header">
+             email_agent.py
+            </div>
+            <div class="card-body">
+              <pre class="mb-3"><code>SMTP_DEFAULT_PORT=587
+SMTP_HOST="smtp.mailersend.net"
+SMTP_USERNAME=""
+SMTP_PASSWORD=""
+FROM_ADDR="test@DOMAIN_GENERATED"
+TO_ADDR="YOUR_EMAIL"</code></pre>
+                </div>
+                </div>
         </div>
       </div>
     </div>

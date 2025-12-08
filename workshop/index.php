@@ -318,7 +318,7 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
     <div class="container">
       <h2 class="mb-4">Bring it all together</h2>
       <div class="row gy-4">
-        <div class="col-lg-12">
+        <div class="col-lg-8">
           <p>This is where we combine all the agents to create a seamless research assistant workflow.</p>
           <p>We will use the Google Search and arXiv agents to gather information, then merge and email the results.</p>
           <div class="card">
@@ -327,6 +327,60 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
             </div>
             <div class="card-body">
               <pre class="mb-3"><code><?= file_get_contents("../adk_research_assistant/agent.py") ?></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="text-monospace">
+                <pre><code>+-----------------------------+
+| (START)                     |
+|  sequential_pipeline_agent  |
++--------------+--------------+
+               |
+               v
++-----------------------------+
+| Step 1: parallel_research_agent |
++--------------+--------------+
+               |
+  +------------+------------+
+  |                         |
+  v                         v
++-----------------+     +----------------------+
+|  google_agent   |     | arxiv_research_agent |
++-----------------+     +----------------------+
+  |       |                 |        |
+  |       v                 |        v
+  | [ Google Search ]       |  [ arXiv API ]
+  |                         |
+  | "google_research_result"| "arxiv_research_result"
+  |                         |
+  +------------+------------+
+               |
+               v
++-----------------------------+
+| Step 2:      merger_agent     |
++-----------------------------+
+               |
+               | (Synthesizes results)
+               | "Synthesized Report & Subject"
+               v
++-----------------------------+
+| Step 3:      email_agent      |
++-----------------------------+
+               |
+               | (Generates & sends HTML email)
+               v
++-----------------------------+
+|        [ SMTP Server ]        |
++-----------------------------+
+               |
+               v
++-----------------------------+
+|       (END) User's Inbox      |
++-----------------------------+</code></pre>
+              </div>
             </div>
           </div>
         </div>

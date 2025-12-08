@@ -48,6 +48,9 @@
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
+            <a class="nav-link" href="#top">Intro</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#presenter">Presenter</a>
           </li>
           <li class="nav-item">
@@ -80,7 +83,7 @@
             GitHub Repository
           </a>
           <br/><br/>
-          <h3>nenuadrian.com/uom/gdg/2025/workshop</h3>
+          <h4>nenuadrian.com/uom/gdg/2025/workshop</h4>
         </div>
         <div class="col-lg-5">
           <div class="card">

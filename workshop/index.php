@@ -166,15 +166,16 @@
         <div class="col-lg-4">
           <div class="card">
             <div class="card-header">
-              Quick bio
+              computo, ergo sum
             </div>
             <div class="card-body">
               <ul class="mb-0">
                 <li>AI researcher &amp; software engineer</li>
-                <li>Works with RL, RLHF, and LLM tooling</li>
+                <li>Works with RL, RLHF, and Graphs</li>
                 <li>Enjoys clean abstractions &amp; messy experiments</li>
-                <li>Hackathon enthusiast</li>
                 <li>Knowledge is power</li>
+                <li>Trustee @ Society of Research Software Engineering</li>
+                <li>Senior Member @ IEEE</li>
               </ul>
             </div>
           </div>

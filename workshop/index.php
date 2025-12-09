@@ -315,7 +315,7 @@ source .venv/bin/activate
 # for windows
 .venv\Scripts\activate
 
-pip install adk
+pip install adk secure-smtplib arxiv
 
 # Create an API key on https://aistudio.google.com/api-keys
 

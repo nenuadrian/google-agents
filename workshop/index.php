@@ -279,7 +279,7 @@ function generate_file_snippets($file)
         <div class="col-lg-12">
           <div class="text-center">
             <img src="./agent-builder.png" alt="Vertex AI Agent Builder Diagram" class="img-fluid"
-              style="border-radius:10px;" />
+              style="border-radius:10px;border:2px solid black;" />
           </div>
         </div>
       </div>

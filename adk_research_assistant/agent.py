@@ -24,6 +24,8 @@ google_agent = LlmAgent(
     output_key="google_research_result",
 )
 
+# --------
+
 parallel_research_agent = ParallelAgent(
     name="ParallelWebResearchAgent",
     sub_agents=[google_agent, arxiv_research_agent],
@@ -57,6 +59,8 @@ Output Requirements:
 """,
     description="Combines research findings from parallel agents into a structured, cited report, strictly grounded on provided inputs.",
 )
+
+# --------
 
 sequential_pipeline_agent = SequentialAgent(
     name="ResearchAndSynthesisPipeline",

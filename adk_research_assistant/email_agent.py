@@ -84,6 +84,8 @@ def send_research_email(
 
 send_research_email_tool = FunctionTool(func=send_research_email)
 
+# --------
+
 email_agent = Agent(
     model=GEMINI_MODEL,
     name="email_body_generator",

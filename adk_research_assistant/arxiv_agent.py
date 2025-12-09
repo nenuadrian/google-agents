@@ -91,6 +91,8 @@ def search_arxiv_with_client(
 
 search_arxiv_with_client_tool = FunctionTool(func=search_arxiv_with_client)
 
+# --------
+
 arxiv_research_agent = Agent(
     model=GEMINI_MODEL,
     name="arxiv_research_agent",

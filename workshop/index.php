@@ -101,7 +101,7 @@ function generate_file_snippets($file)
             December 2025 &middot; University of Manchester GDG
           </p>
           <a href="https://github.com/nenuadrian/google-agents/tree/main/adk_research_assistant" target="_blank"
-            class="btn   btn-lg">
+            class="btn btn-primary btn-lg">
             GitHub Repository
           </a>
           <br /><br />
@@ -184,7 +184,7 @@ function generate_file_snippets($file)
             the <a href="https://github.com/agent-lab" target="_blank">AgentLab group</a> with Dr Mingfei Sun and Prof
             Kaski.
           </p>
-          <a href="https://nenuadrian.com" target="_blank" class="btn   btn-lg">
+          <a href="https://nenuadrian.com" target="_blank" class="btn btn-primary btn-lg">
             Connect with Adrian
           </a>
         </div>
@@ -242,11 +242,11 @@ adk run adk_research_assistant
         </div>
         <div class="col-lg-4">
           <p>20 requests / day limit on Free tier.</p>
-          <a href="https://aistudio.google.com/api-keys" target="_blank" class="btn   btn-lg">
+          <a href="https://aistudio.google.com/api-keys" target="_blank" class="btn btn-primary btn-lg">
             Google AI Studio
           </a>
           <a href="https://google.github.io/adk-docs/get-started/python/" target="_blank"
-            class="btn   btn-lg">
+            class="btn btn-primary btn-lg">
             ADK Docs - Python Getting Started
           </a>
           <br />
@@ -299,7 +299,7 @@ adk run adk_research_assistant
           <?= generate_file_snippets("email_agent") ?>
         </div>
         <div class="col-lg-4">
-          <a href="https://www.mailersend.com/" target="_blank" class="btn   btn-lg">
+          <a href="https://www.mailersend.com/" target="_blank" class="btn btn-primary btn-lg">
             Create MailerSend Account
           </a>
           <br />

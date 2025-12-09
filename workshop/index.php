@@ -11,9 +11,7 @@ function generate_file_snippets($file)
 
   foreach ($snippets as $snippet) {
     $html[] = '<div class="card">';
-    $html[] = '            <div class="card-header">';
-    $html[] = "              $file.py";
-    $html[] = '            </div>';
+    $html[] = '            <div class="card-header">$file.py</div>';
     $html[] = '            <div class="card-body">';
     $html[] = "              <pre class=\"fs-5\"><code>{$snippet}</code></pre>";
     $html[] = '            </div>';
@@ -273,7 +271,7 @@ adk run adk_research_assistant
           <p>We will use the arXiv API to gather research papers related to your query.</p>
         </div>
         <div class="col-lg-8">
-          <pre class="fs-5"><code><?= generate_file_snippets("arxiv_agent") ?></code></pre>
+          <?= generate_file_snippets("arxiv_agent") ?>
         </div>
         <div class="col-lg-4">
           <div class="card">
@@ -298,7 +296,7 @@ adk run adk_research_assistant
             credentials.</p>
         </div>
         <div class="col-lg-8">
-          <pre class="fs-5"><code><?= generate_file_snippets("email_agent") ?></code></pre>
+          <?= generate_file_snippets("email_agent") ?>
         </div>
         <div class="col-lg-4">
           <a href="https://www.mailersend.com/" target="_blank" class="btn btn-outline-primary btn-lg">
@@ -343,7 +341,7 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
           <p>We will use the Google Search and arXiv agents to gather information, then merge and email the results.</p>
         </div>
         <div class="col-lg-8">
-          <pre class="fs-5"><code><?= generate_file_snippets("agent") ?></code></pre>
+          <?= generate_file_snippets("agent") ?>
         </div>
         <div class="col-lg-4">
           <div class="card">

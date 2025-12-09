@@ -342,8 +342,6 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
         </div>
         <div class="col-lg-8">
           <?= generate_file_snippets("agent") ?>
-        </div>
-        <div class="col-lg-4">
           <div class="card">
             <div class="card-header">
               Run
@@ -352,7 +350,8 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
               <pre class="fs-5"><code>adk run .</code></pre>
             </div>
           </div>
-          <br />
+        </div>
+        <div class="col-lg-4">
           <div class="card">
             <div class="card-header">
               Architecture

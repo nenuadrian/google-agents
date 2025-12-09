@@ -171,19 +171,19 @@ function generate_file_snippets($file)
       <h2 class="mb-4">Presenter: Adrian Mircea Nenu</h2>
       <div class="row gy-4">
         <div class="col-lg-8">
-          <p>
+          <div class="alert alert-secondary">
             Originally from Romania, BSc CS with Industrial Experience at UoM, MSc Business Analytics at University of
             Bath,
             worked at Morgan Stanley (IE + full-time 4 years) as an individual contributor and manager, and at Google in
             roles ranging from customer-facing, to full-stack, to infrastructure (<a
               href="https://research.google/pubs/monarch-googles-planet-scale-in-memory-time-series-database/"
               target="_blank">Monarch Planet-Scale In-Memory Time Series Database - C++</a>).
-          </p>
-          <p>
+  </div>
+          <div class="alert alert-secondary">
             My PhD work spans from policy-gradient methods and optimisation geometry to GNNs and Graph Transformers, in
             the <a href="https://github.com/agent-lab" target="_blank">AgentLab group</a> with Dr Mingfei Sun and Prof
             Kaski.
-          </p>
+          </div>
           <a href="https://nenuadrian.com" target="_blank" class="btn btn-primary btn-lg">
             Connect with Adrian
           </a>
@@ -241,7 +241,7 @@ adk run adk_research_assistant
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="alert alert-dismissible alert-info">20 requests / day limit on Free tier.</div>
+          <div class="alert alert-info">20 requests / day limit on Free tier.</div>
           <div class="text-center">
             <a href="https://aistudio.google.com/api-keys" target="_blank" class="btn btn-primary btn-lg">
               Google AI Studio
@@ -306,8 +306,6 @@ adk run adk_research_assistant
             </a>
           </div>
           <br />
-          <br />
-
           <div class="card">
             <div class="card-header">
               Dependencies

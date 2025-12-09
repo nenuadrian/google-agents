@@ -204,7 +204,9 @@ conda activate agents
 
 # Create an API key on https://aistudio.google.com/api-keys
 
-# Create base project: 1) gemini-2.5-flash, 1) Google AI Studio, provide the Key
+# Create base project: 
+# Pick 1) gemini-2.5-flash
+# Pick 1) Google AI Studio, provide the Key
 adk create adk_research_assistant
 
 adk run adk_research_assistant

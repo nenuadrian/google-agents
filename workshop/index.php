@@ -13,7 +13,7 @@ function generate_file_snippets($file)
     $html[] = '<div class="card">';
     $html[] = "            <div class=\"card-header\">$file.py</div>";
     $html[] = '            <div class="card-body">';
-    $html[] = "              <pre class=\"fs-5\"><code>{$snippet}</code></pre>";
+    $html[] = "              <pre class=\"fs-5\"><code>" . trim($snippet) . "</code></pre>";
     $html[] = '            </div>';
     $html[] = '          </div>';
     $html[] = '          <br>';

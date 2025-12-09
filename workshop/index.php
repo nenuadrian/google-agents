@@ -515,14 +515,12 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
 
 brew install gemini-cli
 
-gemini
-            </code></pre>
+gemini</code></pre>
             </div>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="alert alert-info">Create a GEMINI.md file with your preferences to inspire Gemini without having to prompt in the CLI every time.</div>
-          <br/>
           <div class="text-center">
             <a href="https://github.com/google-gemini/gemini-cli" target="_blank" class="btn btn-primary btn-lg">
               Gemini CLI
@@ -537,7 +535,7 @@ gemini
   </section>
   <section id="thanks" class="section">
     <div class="container">
-      <h2 class="mb-4">THANK YOU FOR JOINING GDG MANCHESTER!</h2>
+      <h2 class="mb-4">Thank you for joining GDG Manchester!</h2>
       <div class="text-center">
         <a href="https://gdg.community.dev/gdg-on-campus-the-university-of-manchester-manchester-united-kingdom/"
           target="_blank">

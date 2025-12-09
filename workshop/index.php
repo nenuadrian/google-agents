@@ -340,6 +340,14 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
         </div>
         <div class="col-lg-4">
           <div class="card">
+            <div class="card-header">
+              Run
+            </div>
+            <div class="card-body">
+              <pre class="fs-5"><code>adk run .</code></pre>
+            </div>
+          </div>
+          <div class="card">
             <div class="card-body">
               <div class="fs-5">
                 <pre><code>+-----------------------------+
@@ -412,7 +420,6 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="bg-dark text-light">
     <div class="container text-center">
       <p class="mb-1">&copy; 2025 UoM GDG · Gemini CLI Workshop</p>

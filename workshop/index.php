@@ -488,7 +488,7 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
           <div class="text-center">
             <a href="https://gdg.community.dev/gdg-on-campus-the-university-of-manchester-manchester-united-kingdom/"
               target="_blank">
-              <img src="./gdg.ng" alt="UoM GDG Logo" class="img-fluid" />
+              <img src="./gdg.png" alt="UoM GDG Logo" class="img-fluid" />
             </a>
           </div>
 

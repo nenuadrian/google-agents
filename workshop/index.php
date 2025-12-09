@@ -230,7 +230,7 @@ adk run adk_research_assistant
               Append to .env
             </div>
             <div class="card-body">
-              <pre class="fs-5"><code>GEMINI_MODEL=gemini-2.5-flash-preview-09-2025</code></pre>
+              <pre class="fs-5"><code>GEMINI_MODEL=gemini-2.5-flash</code></pre>
             </div>
           </div>
         </div>

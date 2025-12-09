@@ -315,6 +315,8 @@ source .venv/bin/activate
 conda create -n agents python=3.11 -y
 conda activate agents
 
+pip intall adk
+
 # Create an API key on https://aistudio.google.com/api-keys
 
 # Create base project: 

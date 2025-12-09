@@ -194,7 +194,7 @@
               Kick off
             </div>
             <div class="card-body">
-              <pre class="mb-3"><code># Python Env
+              <pre class="fs-5"><code># Python Env
 python -m venv .venv
 source .venv/bin/activate
 
@@ -228,7 +228,7 @@ adk run adk_research_assistant
               Append to .env
             </div>
             <div class="card-body">
-              <pre class="mb-3"><code>GEMINI_MODEL=gemini-2.5-flash-preview-09-2025</code></pre>
+              <pre class="fs-5"><code>GEMINI_MODEL=gemini-2.5-flash-preview-09-2025</code></pre>
             </div>
           </div>
         </div>
@@ -248,7 +248,7 @@ adk run adk_research_assistant
               arxiv_agent.py
             </div>
             <div class="card-body">
-              <pre class="mb-3"><code><?= file_get_contents("../adk_research_assistant/arxiv_agent.py") ?></code></pre>
+              <pre class="fs-5"><code><?= file_get_contents("../adk_research_assistant/arxiv_agent.py") ?></code></pre>
             </div>
           </div>
         </div>
@@ -258,7 +258,7 @@ adk run adk_research_assistant
               Dependencies
             </div>
             <div class="card-body">
-              <pre class="mb-3"><code>pip install arxiv</code></pre>
+              <pre class="fs-5"><code>pip install arxiv</code></pre>
             </div>
           </div>
         </div>
@@ -280,7 +280,7 @@ adk run adk_research_assistant
               email_agent.py
             </div>
             <div class="card-body">
-              <pre class="mb-3"><code><?= file_get_contents("../adk_research_assistant/email_agent.py") ?></code></pre>
+              <pre class="fs-5"><code><?= file_get_contents("../adk_research_assistant/email_agent.py") ?></code></pre>
             </div>
           </div>
         </div>
@@ -296,7 +296,7 @@ adk run adk_research_assistant
               Dependencies
             </div>
             <div class="card-body">
-              <pre class="mb-3"><code>pip install secure-smtplib</code></pre>
+              <pre class="fs-5"><code>pip install secure-smtplib</code></pre>
             </div>
           </div>
           <br />
@@ -306,7 +306,7 @@ adk run adk_research_assistant
               Append to .env
             </div>
             <div class="card-body">
-              <pre class="mb-3"><code>SMTP_DEFAULT_PORT=587
+              <pre class="fs-5"><code>SMTP_DEFAULT_PORT=587
 SMTP_HOST="smtp.mailersend.net"
 SMTP_USERNAME=""
 SMTP_PASSWORD=""
@@ -332,7 +332,7 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
               agent.py
             </div>
             <div class="card-body">
-              <pre class="mb-3"><code><?= file_get_contents("../adk_research_assistant/agent.py") ?></code></pre>
+              <pre class="fs-5"><code><?= file_get_contents("../adk_research_assistant/agent.py") ?></code></pre>
             </div>
           </div>
         </div>

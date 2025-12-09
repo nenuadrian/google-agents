@@ -242,13 +242,15 @@ adk run adk_research_assistant
         </div>
         <div class="col-lg-4">
           <div class="alert alert-dismissible alert-info">20 requests / day limit on Free tier.</div>
-          <a href="https://aistudio.google.com/api-keys" target="_blank" class="btn btn-primary btn-lg">
-            Google AI Studio
-          </a>
-          <a href="https://google.github.io/adk-docs/get-started/python/" target="_blank"
-            class="btn btn-primary btn-lg">
-            ADK Docs - Python Getting Started
-          </a>
+          <div class="text-center">
+            <a href="https://aistudio.google.com/api-keys" target="_blank" class="btn btn-primary btn-lg">
+              Google AI Studio
+            </a>
+            <a href="https://google.github.io/adk-docs/get-started/python/" target="_blank"
+              class="btn btn-primary btn-lg">
+              ADK Docs
+            </a>
+          </div>
           <br />
           <br />
           <div class="card">
@@ -299,9 +301,11 @@ adk run adk_research_assistant
           <?= generate_file_snippets("email_agent") ?>
         </div>
         <div class="col-lg-4">
-          <a href="https://www.mailersend.com/" target="_blank" class="btn btn-primary btn-lg">
-            Create MailerSend Account
-          </a>
+          <div class="text-center">
+            <a href="https://www.mailersend.com/" target="_blank" class="btn btn-primary btn-lg">
+              Create MailerSend Account
+            </a>
+          </div>
           <br />
           <br />
 
@@ -358,7 +362,7 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
               GitHub Repository
             </a>
           </div>
-          <br/>
+          <br />
           <div class="card">
             <div class="card-header">
               Architecture

@@ -226,7 +226,7 @@ function generate_file_snippets($file)
                 Models
               </h4>
               From an opinionated perspective, models are the output of training processes (LLM) and not of product
-              development. Think Gemini Flash/Pro/Banana, rather than Gemini UI / Gemini CLI.
+              development. Think Gemini Flash/Pro/Banana, rather than Gemini CLI.
             </div>
           </div>
           <br />
@@ -271,6 +271,18 @@ function generate_file_snippets($file)
               class="btn btn-warning">
               Vertex AI Custom Models
             </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="demo">
+    <div class="container">
+      <h2 class="mb-4">Pray to the Demo Gods</h2>
+      <div class="row gy-4">
+        <div class="col-lg-12">
+          <div class="text-center">
+            <img src="./demo.png" alt="Demo Screenshot" class="img-fluid" />
           </div>
         </div>
       </div>

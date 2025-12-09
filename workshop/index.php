@@ -150,9 +150,8 @@
       <div class="row gy-4">
         <div class="col-lg-8">
           <p>
-            Originally from Romania, CS BSc with Industrial Experience at UoM, MSc Business Analytics at Uni. of Bath,
-            worked at Morgan Stanley (IE + full-time 4 years) as an individual contributor and manager, and at Google.
-            Worked in customer-facing, web, and infrastructure (C++) at Google.
+            Originally from Romania, BSc CS with Industrial Experience at UoM, MSc Business Analytics at University of Bath,
+            worked at Morgan Stanley (IE + full-time 4 years) as an individual contributor and manager, and at Google in roles ranging from customer-facing, to full-stack, to infrastructure (<a href="https://research.google/pubs/monarch-googles-planet-scale-in-memory-time-series-database/" target="_blank">Monarch Planet-Scale In-Memory Time Series Database - C++</a>).
           </p>
           <p>
             My PhD work spans from policy-gradient methods and optimisation geometry to GNNs and Graph Transformers, in

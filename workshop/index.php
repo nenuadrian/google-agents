@@ -535,7 +535,7 @@ gemini</code></pre>
   </section>
   <section id="thanks" class="section">
     <div class="container">
-      <h2 class="mb-4">Thank you for joining GDG Manchester</h2>
+      <h2 class="mb-4 text-center">Thank you for joining GDG Manchester</h2>
       <div class="text-center">
         <a href="https://gdg.community.dev/gdg-on-campus-the-university-of-manchester-manchester-united-kingdom/"
           target="_blank">

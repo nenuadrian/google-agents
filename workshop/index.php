@@ -5,7 +5,7 @@
 function generate_file_snippets($file)
 {
   $file_contents = file_get_contents("../adk_research_assistant/$file.py");
-  $snippets = explode("#--------", $file_contents);
+  $snippets = explode("# --------", $file_contents);
 
   $html = [];
 

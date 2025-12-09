@@ -201,7 +201,7 @@ function generate_file_snippets($file)
               </ul>
             </div>
           </div>
-          <br/>
+          <br />
           <div class="text-center">
             <a href="https://nenuadrian.com" target="_blank" class="btn btn-info btn-lg">
               Connect with Adrian
@@ -226,11 +226,13 @@ function generate_file_snippets($file)
               development. Think Gemini Flash/Pro/Banana, rather than Gemini UI / Gemini CLI.
             </div>
           </div>
-          <br/>
+          <br />
           <div class="text-center">
-            <a href="https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models" target="_blank" class="btn btn-primary">
+            <a href="https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models" target="_blank"
+              class="btn btn-primary">
               Gemini Models
             </a>
+          </div>
         </div>
         <div class="col-lg-4">
           <div class="card bg-info">
@@ -238,12 +240,14 @@ function generate_file_snippets($file)
               <h4 class="card-title">
                 Agents
               </h4>
-              Are all AI products a mixture of agents, using multiple models? Think VSC, Cursor, Gemini UI, ChatGPT, Gemini CLI, Copilot.
+              Are all AI products a mixture of agents, using multiple models? Think VSC, Cursor, Gemini UI, ChatGPT,
+              Gemini CLI, Copilot.
             </div>
           </div>
-          <br/>
+          <br />
           <div class="text-center">
-            <a href="https://cloud.google.com/products/agent-builder?hl=en#ucj-7-0" target="_blank" class="btn btn-info">
+            <a href="https://cloud.google.com/products/agent-builder?hl=en#ucj-7-0" target="_blank"
+              class="btn btn-info">
               Vertex AI Agent Builder
             </a>
           </div>
@@ -254,12 +258,14 @@ function generate_file_snippets($file)
               <h4 class="card-title">
                 Custom Models
               </h4>
-              Further train models with business data, adapt them for specific needs, deploy them on hardware of choice. Think GCP CLI with Vertex AI.
+              Further train models with business data, adapt them for specific needs, deploy them on hardware of
+              choice. Think GCP CLI with Vertex AI.
             </div>
           </div>
-          <br/>
+          <br />
           <div class="text-center">
-            <a href="https://cloud.google.com/vertex-ai?hl=en#train-custom-ml-models" target="_blank" class="btn btn-warning">
+            <a href="https://cloud.google.com/vertex-ai?hl=en#train-custom-ml-models" target="_blank"
+              class="btn btn-warning">
               Vertex AI Custom Models
             </a>
           </div>

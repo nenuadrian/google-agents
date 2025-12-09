@@ -89,7 +89,7 @@
         <div class="col-lg-5">
           <div class="card">
             <div class="card-body">
-              <div class="text-monospace">
+              <div class="fs-5">
                 <pre><code>+-----------------------------+
 | (START)                     |
 |  sequential_pipeline_agent  |
@@ -339,7 +339,7 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
         <div class="col-lg-4">
           <div class="card">
             <div class="card-body">
-              <div class="text-monospace">
+              <div class="fs-5">
                 <pre><code>+-----------------------------+
 | (START)                     |
 |  sequential_pipeline_agent  |

@@ -353,7 +353,7 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
               Architecture
             </div>
             <div class="card-body">
-              <div class="fs-5">
+              <div class="fs-6">
                 <pre><code>+-----------------------------+
 | (START)                     |
 |  sequential_pipeline_agent  |

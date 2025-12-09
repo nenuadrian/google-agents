@@ -62,7 +62,7 @@ function generate_file_snippets($file)
   <!-- Navbar -->
   <nav id="mainNavbar" class="navbar navbar-expand-lg bg-primary fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#top">UoM GDG · Agentic Architectures</a>
+      <a class="navbar-brand" href="#top">UoM GDG</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
         <span class="navbar-toggler-icon"></span>
       </button>

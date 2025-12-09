@@ -157,7 +157,7 @@
           <p>
             My PhD work spans from policy-gradient methods and optimisation geometry to GNNs and Graph Transformers, in
             the <a href="https://github.com/agent-lab" target="_blank">AgentLab group</a> with Dr Mingfei Sun and Prof
-            Kask.
+            Kaski.
           </p>
           <a href="https://nenuadrian.com" target="_blank" class="btn btn-outline-primary btn-lg">
             Connect with Adrian

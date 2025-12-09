@@ -213,53 +213,37 @@ function generate_file_snippets($file)
 
   <section class="section bg-light" id="concepts">
     <div class="container">
-      <h2 class="mb-4">Step I: Base Agent</h2>
+      <h2 class="mb-4">Concepts Review</h2>
       <div class="row gy-4">
         <div class="col-lg-4">
           <div class="card bg-primary">
-            <div class="card-title">
-              Models
-            </div>
             <div class="card-body">
+              <h4 class="card-title">
+                Models
+              </h4>
               From an opinionated perspective, models are the output of training processes and not of product
               development.
             </div>
           </div>
+        </div>
+        <div class="col-lg-4">
           <div class="card bg-info">
-            <div class="card-title">
-              Agents
-            </div>
             <div class="card-body">
-              Are all AI products a mixture of agents? Visual Studio Code, Gemini, ChatGPT, Gemini CLI.
-            </div>
-          </div>
-          <div class="card bg-warning">
-            <div class="card-title">
-              Custom Models
-            </div>
-            <div class="card-body">
+              <h4 class="card-title">
+                Agents
+              </h4>
+
               Are all AI products a mixture of agents? Visual Studio Code, Gemini, ChatGPT, Gemini CLI.
             </div>
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="alert alert-info">20 requests / day limit on Free tier.</div>
-          <div class="text-center">
-            <a href="https://aistudio.google.com/api-keys" target="_blank" class="btn btn-primary btn-lg">
-              Google AI Studio
-            </a>
-            <a href="https://google.github.io/adk-docs/get-started/python/" target="_blank"
-              class="btn btn-primary btn-lg">
-              ADK Docs
-            </a>
-          </div>
-          <br />
-          <div class="card">
-            <div class="card-header">
-              Append to .env
-            </div>
+          <div class="card bg-warning">
             <div class="card-body">
-              <pre class="fs-5"><code>GEMINI_MODEL=gemini-2.5-flash</code></pre>
+              <h4 class="card-title">
+                Custom Models
+              </h4>
+              Are all AI products a mixture of agents? Visual Studio Code, Gemini, ChatGPT, Gemini CLI.
             </div>
           </div>
         </div>

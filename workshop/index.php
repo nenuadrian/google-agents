@@ -347,7 +347,11 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
               <pre class="fs-5"><code>adk run .</code></pre>
             </div>
           </div>
+          <br/>
           <div class="card">
+            <div class="card-header">
+              Architecture
+            </div>
             <div class="card-body">
               <div class="fs-5">
                 <pre><code>+-----------------------------+

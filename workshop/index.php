@@ -307,21 +307,22 @@ function generate_file_snippets($file)
               Kick off
             </div>
             <div class="card-body">
-              <pre class="fs-5"><code># Python Env
+              <pre class="fs-5"><code># Python Env: https://www.python.org/downloads/
 python -m venv .venv
-source .venv/bin/activate
 
-# OR Conda - feel free to use anything, e.g. Poetry, Pipenv, etc.
-conda create -n agents python=3.11 -y
-conda activate agents
+# for macOS/Linux
+source .venv/bin/activate 
+# for windows
+.venv\Scripts\activate
 
-pip intall adk
+pip install adk
 
 # Create an API key on https://aistudio.google.com/api-keys
 
 # Create base project: 
 # Pick 1) gemini-2.5-flash
 # Pick 1) Google AI Studio, provide the Key
+
 adk create adk_research_assistant
 
 adk run adk_research_assistant

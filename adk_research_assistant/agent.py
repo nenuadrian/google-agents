@@ -6,6 +6,8 @@ from google.adk.tools.google_search_tool import google_search
 
 from arxiv_agent import arxiv_research_agent
 from email_agent import email_agent
+from duckie_agent import duckie_research_agent
+from hacker_news_agent import hacker_news_research_agent
 
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 
@@ -28,7 +30,7 @@ google_agent = LlmAgent(
 
 parallel_research_agent = ParallelAgent(
     name="ParallelWebResearchAgent",
-    sub_agents=[google_agent, arxiv_research_agent],
+    sub_agents=[google_agent, arxiv_research_agent, duckie_research_agent, hacker_news_research_agent],
     description="Runs multiple research agents in parallel to gather information.",
 )
 
@@ -38,9 +40,9 @@ merger_agent = LlmAgent(
     instruction="""You are an AI assistant merging research outputs into a structured report.
 
 Follow this workflow:
-1. Read the Google and arXiv summaries below; do not use external knowledge.
+1. Read the Google, arXiv, Duckie, and Hacker News summaries below; do not use external knowledge.
 2. Identify the main topics or themes present and organize them into clear headings.
-3. Under each heading, integrate the relevant findings, attributing them to their source (Google or arXiv) in-line.
+3. Under each heading, integrate the relevant findings, attributing them to their source (Google, arXiv, Duckie, or Hacker News) in-line.
 4. Conclude with a brief overall insight section synthesizing cross-source takeaways.
 5. Provide a suggested email subject line on the final line in the format: "Suggested Subject: ..."
 
@@ -50,6 +52,12 @@ Input Summaries:
 
 - arXiv Papers:
   {arxiv_research_result}
+
+- Duckie Search Results:
+  {duckie_research_result}
+
+- Hacker News Search Results:
+  {hacker_news_research_result}
 
 Output Requirements:
 - Use Markdown headings (##) for each topic.

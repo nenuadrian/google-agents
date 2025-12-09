@@ -484,21 +484,16 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
             Let's have a few of you showcase what you have built, challenges you faced in this session and what you
             think you could build next!
           </p>
-          <br />
-          <div class="text-center">
-            <a href="https://gdg.community.dev/gdg-on-campus-the-university-of-manchester-manchester-united-kingdom/"
-              target="_blank">
-              <img src="./gdg.png" alt="UoM GDG Logo" class="img-fluid" />
-            </a>
-          </div>
-
         </div>
-
-
       </div>
     </div>
   </section>
-
+  <div class="text-center">
+    <a href="https://gdg.community.dev/gdg-on-campus-the-university-of-manchester-manchester-united-kingdom/"
+      target="_blank">
+      <img src="./gdg.png" alt="UoM GDG Logo" class="img-fluid" />
+    </a>
+  </div>
   <footer class="bg-dark text-light">
     <div class="container text-center">
       <p class="mb-1">&copy; 2025 UoM GDG · Gemini CLI Workshop</p>

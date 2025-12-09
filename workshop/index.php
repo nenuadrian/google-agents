@@ -1,5 +1,29 @@
 <!doctype html>
 <html lang="en">
+<?php
+
+function generate_file_snippets($file)
+{
+  $file_contents = file_get_contents("../adk_research_assistant/$file.py");
+  $snippets = explode("#--------", $file_contents);
+
+  $html = [];
+
+  foreach ($snippets as $snippet) {
+    $html[] = '<div class="card">';
+    $html[] = '            <div class="card-header">';
+    $html[] = "              $file.py";
+    $html[] = '            </div>';
+    $html[] = '            <div class="card-body">';
+    $html[] = "              <pre class=\"fs-5\"><code>{$snippet}</code></pre>";
+    $html[] = '            </div>';
+    $html[] = '          </div>';
+    $html[] = '          <br>';
+  }
+  return implode("\n", $html);
+}
+
+?>
 
 <head>
   <meta charset="utf-8">
@@ -150,8 +174,12 @@
       <div class="row gy-4">
         <div class="col-lg-8">
           <p>
-            Originally from Romania, BSc CS with Industrial Experience at UoM, MSc Business Analytics at University of Bath,
-            worked at Morgan Stanley (IE + full-time 4 years) as an individual contributor and manager, and at Google in roles ranging from customer-facing, to full-stack, to infrastructure (<a href="https://research.google/pubs/monarch-googles-planet-scale-in-memory-time-series-database/" target="_blank">Monarch Planet-Scale In-Memory Time Series Database - C++</a>).
+            Originally from Romania, BSc CS with Industrial Experience at UoM, MSc Business Analytics at University of
+            Bath,
+            worked at Morgan Stanley (IE + full-time 4 years) as an individual contributor and manager, and at Google in
+            roles ranging from customer-facing, to full-stack, to infrastructure (<a
+              href="https://research.google/pubs/monarch-googles-planet-scale-in-memory-time-series-database/"
+              target="_blank">Monarch Planet-Scale In-Memory Time Series Database - C++</a>).
           </p>
           <p>
             My PhD work spans from policy-gradient methods and optimisation geometry to GNNs and Graph Transformers, in
@@ -250,7 +278,7 @@ adk run adk_research_assistant
               arxiv_agent.py
             </div>
             <div class="card-body">
-              <pre class="fs-5"><code><?= file_get_contents("../adk_research_assistant/arxiv_agent.py") ?></code></pre>
+              <pre class="fs-5"><code><?= generate_file_snippets("arxiv_agent") ?></code></pre>
             </div>
           </div>
         </div>
@@ -282,7 +310,7 @@ adk run adk_research_assistant
               email_agent.py
             </div>
             <div class="card-body">
-              <pre class="fs-5"><code><?= file_get_contents("../adk_research_assistant/email_agent.py") ?></code></pre>
+              <pre class="fs-5"><code><?= generate_file_snippets("email_agent") ?></code></pre>
             </div>
           </div>
         </div>
@@ -334,7 +362,7 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
               agent.py
             </div>
             <div class="card-body">
-              <pre class="fs-5"><code><?= file_get_contents("../adk_research_assistant/agent.py") ?></code></pre>
+              <pre class="fs-5"><code><?= generate_file_snippets("agent") ?></code></pre>
             </div>
           </div>
         </div>
@@ -347,7 +375,7 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
               <pre class="fs-5"><code>adk run .</code></pre>
             </div>
           </div>
-          <br/>
+          <br />
           <div class="card">
             <div class="card-header">
               Architecture

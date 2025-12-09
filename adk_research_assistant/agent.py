@@ -13,10 +13,10 @@ GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 google_agent = LlmAgent(
     name="GoogleSearchResearchAgent",
     model=GEMINI_MODEL,
-    instruction="""You are an AI research assistant specializing in web search.
+    instruction="""You are an AI research assistant specializing in finding latest research using web search.
 1. Invoke the Google Search tool with a focused query before drafting your answer.
 2. Ground every statement in the retrieved results and synthesize them into one concise (1–2 sentence) summary.
-3. Output only that summary; do not include citations or extra commentary.
+3. Output only that summary; include citations and extra commentary.
 """,
     description="Researches using Google.",
     tools=[google_search],

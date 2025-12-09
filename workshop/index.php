@@ -291,7 +291,7 @@ function generate_file_snippets($file)
       <div class="row gy-4">
         <div class="col-lg-12">
           <div class="text-center">
-            <img src="./demo.png" alt="Demo Screenshot" class="img-fluid" />
+            <img src="./demo.png" alt="Demo Screenshot" class="img-fluid" style="border-radius:10px;border:2px solid black;"/>
           </div>
         </div>
       </div>
@@ -546,7 +546,7 @@ gemini</code></pre>
       <div class="text-center">
         <a href="https://gdg.community.dev/gdg-on-campus-the-university-of-manchester-manchester-united-kingdom/"
           target="_blank">
-          <img src="./gdg.png" alt="UoM GDG Logo" class="img-fluid" />
+          <img src="./gdg.png" alt="UoM GDG Logo" class="img-fluid" style="border-radius:10px;border:2px solid black;"/>
         </a>
       </div>
     </div>

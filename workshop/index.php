@@ -178,15 +178,12 @@ function generate_file_snippets($file)
             roles ranging from customer-facing, to full-stack, to infrastructure (<a
               href="https://research.google/pubs/monarch-googles-planet-scale-in-memory-time-series-database/"
               target="_blank">Monarch Planet-Scale In-Memory Time Series Database - C++</a>).
-  </div>
+          </div>
           <div class="alert alert-secondary">
             My PhD work spans from policy-gradient methods and optimisation geometry to GNNs and Graph Transformers, in
             the <a href="https://github.com/agent-lab" target="_blank">AgentLab group</a> with Dr Mingfei Sun and Prof
             Kaski.
           </div>
-          <a href="https://nenuadrian.com" target="_blank" class="btn btn-primary btn-lg">
-            Connect with Adrian
-          </a>
         </div>
         <div class="col-lg-4">
           <div class="card">
@@ -204,12 +201,71 @@ function generate_file_snippets($file)
               </ul>
             </div>
           </div>
+          <div class="text-center">
+            <a href="https://nenuadrian.com" target="_blank" class="btn btn-primary btn-lg">
+              Connect with Adrian
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-
+  <section class="section bg-light" id="concepts">
+    <div class="container">
+      <h2 class="mb-4">Step I: Base Agent</h2>
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="card bg-primary">
+            <div class="card-title">
+              Models
+            </div>
+            <div class="card-body">
+              From an opinionated perspective, models are the output of training processes and not of product
+              development.
+            </div>
+          </div>
+          <div class="card bg-info">
+            <div class="card-title">
+              Agents
+            </div>
+            <div class="card-body">
+              Are all AI products a mixture of agents? Visual Studio Code, Gemini, ChatGPT, Gemini CLI.
+            </div>
+          </div>
+          <div class="card bg-warning">
+            <div class="card-title">
+              Custom Models
+            </div>
+            <div class="card-body">
+              Are all AI products a mixture of agents? Visual Studio Code, Gemini, ChatGPT, Gemini CLI.
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="alert alert-info">20 requests / day limit on Free tier.</div>
+          <div class="text-center">
+            <a href="https://aistudio.google.com/api-keys" target="_blank" class="btn btn-primary btn-lg">
+              Google AI Studio
+            </a>
+            <a href="https://google.github.io/adk-docs/get-started/python/" target="_blank"
+              class="btn btn-primary btn-lg">
+              ADK Docs
+            </a>
+          </div>
+          <br />
+          <div class="card">
+            <div class="card-header">
+              Append to .env
+            </div>
+            <div class="card-body">
+              <pre class="fs-5"><code>GEMINI_MODEL=gemini-2.5-flash</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="section bg-light" id="steps">
     <div class="container">
       <h2 class="mb-4">Step I: Base Agent</h2>
@@ -428,6 +484,13 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
             Let's have a few of you showcase what you have built, challenges you faced in this session and what you
             think you could build next!
           </p>
+          <br />
+          <div class="text-center">
+            <a href="https://gdg.community.dev/gdg-on-campus-the-university-of-manchester-manchester-united-kingdom/"
+              target="_blank">
+              <img src="./gdg.ng" alt="UoM GDG Logo" class="img-fluid" />
+            </a>
+          </div>
 
         </div>
 

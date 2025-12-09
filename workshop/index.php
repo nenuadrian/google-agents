@@ -506,13 +506,7 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
   </div>
   <footer class="bg-dark text-light">
     <div class="container text-center">
-      <p class="mb-1">&copy; 2025 UoM GDG · Gemini CLI Workshop</p>
-      <p class="mb-0">
-        Contact:
-        <a href="mailto:contact@nenuadrian.com" class="link-light">
-          contact@nenuadrian.com
-        </a>
-      </p>
+      <p class="mb-1">&copy; 2025 UoM GDG · Agentic Architectures Workshop</p>
     </div>
   </footer>
 

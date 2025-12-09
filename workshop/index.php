@@ -273,14 +273,7 @@ adk run adk_research_assistant
           <p>We will use the arXiv API to gather research papers related to your query.</p>
         </div>
         <div class="col-lg-8">
-          <div class="card">
-            <div class="card-header">
-              arxiv_agent.py
-            </div>
-            <div class="card-body">
-              <pre class="fs-5"><code><?= generate_file_snippets("arxiv_agent") ?></code></pre>
-            </div>
-          </div>
+          <pre class="fs-5"><code><?= generate_file_snippets("arxiv_agent") ?></code></pre>
         </div>
         <div class="col-lg-4">
           <div class="card">
@@ -305,14 +298,7 @@ adk run adk_research_assistant
             credentials.</p>
         </div>
         <div class="col-lg-8">
-          <div class="card">
-            <div class="card-header">
-              email_agent.py
-            </div>
-            <div class="card-body">
-              <pre class="fs-5"><code><?= generate_file_snippets("email_agent") ?></code></pre>
-            </div>
-          </div>
+          <pre class="fs-5"><code><?= generate_file_snippets("email_agent") ?></code></pre>
         </div>
         <div class="col-lg-4">
           <a href="https://www.mailersend.com/" target="_blank" class="btn btn-outline-primary btn-lg">
@@ -357,14 +343,7 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
           <p>We will use the Google Search and arXiv agents to gather information, then merge and email the results.</p>
         </div>
         <div class="col-lg-8">
-          <div class="card">
-            <div class="card-header">
-              agent.py
-            </div>
-            <div class="card-body">
-              <pre class="fs-5"><code><?= generate_file_snippets("agent") ?></code></pre>
-            </div>
-          </div>
+          <pre class="fs-5"><code><?= generate_file_snippets("agent") ?></code></pre>
         </div>
         <div class="col-lg-4">
           <div class="card">

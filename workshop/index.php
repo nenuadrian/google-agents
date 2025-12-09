@@ -11,7 +11,7 @@ function generate_file_snippets($file)
 
   foreach ($snippets as $snippet) {
     $html[] = '<div class="card">';
-    $html[] = '            <div class="card-header">$file.py</div>';
+    $html[] = "            <div class=\"card-header\">$file.py</div>";
     $html[] = '            <div class="card-body">';
     $html[] = "              <pre class=\"fs-5\"><code>{$snippet}</code></pre>";
     $html[] = '            </div>';

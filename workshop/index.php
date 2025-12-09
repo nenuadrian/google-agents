@@ -203,7 +203,7 @@ function generate_file_snippets($file)
           </div>
           <br />
           <div class="text-center">
-            <a href="https://nenuadrian.com" target="_blank" class="btn btn-info btn-lg">
+            <a href="https://nenuadrian.com" target="_blank" class="btn btn-secondary">
               Connect with Adrian
             </a>
           </div>

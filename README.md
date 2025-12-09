@@ -4,7 +4,7 @@
 
 [Workshop: https://nenuadrian.com/uom/gdg/2025/workshop/](https://nenuadrian.com/uom/gdg/2025/workshop/)
 
-![image](./assets/example.png)
+![image](./adk_research_assistant/assets/example.png)
 
 ## Architecture
 

@@ -252,7 +252,6 @@ adk run adk_research_assistant
             </a>
           </div>
           <br />
-          <br />
           <div class="card">
             <div class="card-header">
               Append to .env

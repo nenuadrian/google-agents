@@ -101,7 +101,7 @@ function generate_file_snippets($file)
             December 2025 &middot; University of Manchester GDG
           </p>
           <a href="https://github.com/nenuadrian/google-agents/tree/main/adk_research_assistant" target="_blank"
-            class="btn btn-primary btn-lg">
+            class="btn btn-danger btn-lg">
             GitHub Repository
           </a>
           <br /><br />
@@ -352,6 +352,12 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
           </div>
         </div>
         <div class="col-lg-4">
+          <div class="text-center">
+            <a href="https://github.com/nenuadrian/google-agents/tree/main/adk_research_assistant" target="_blank"
+              class="btn btn-danger btn-lg">
+              GitHub Repository
+            </a>
+          </div>
           <div class="card">
             <div class="card-header">
               Architecture

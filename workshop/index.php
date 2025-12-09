@@ -73,6 +73,9 @@ function generate_file_snippets($file)
             <a class="nav-link" href="#top">Intro</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#concepts">Concepts</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#presenter">Presenter</a>
           </li>
           <li class="nav-item">

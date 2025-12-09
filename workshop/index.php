@@ -79,10 +79,13 @@ function generate_file_snippets($file)
             <a class="nav-link" href="#concepts">Concepts</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#demo">Demo</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#steps">Workshop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#present">Showcase</a>
+            <a class="nav-link" href="#cli">CLI</a>
           </li>
         </ul>
       </div>
@@ -497,25 +500,52 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
       </div>
     </div>
   </section>
-  <section id="present" class="section bg-light">
+  <section id="cli" class="section bg-light">
     <div class="container">
-      <h2 class="mb-4">Step IV: Present your work?!</h2>
+      <h2 class="mb-4">GDD - Gemini CLI Driven Development</h2>
       <div class="row gy-4">
-        <div class="col-lg-12">
-          <p>
-            Let's have a few of you showcase what you have built, challenges you faced in this session and what you
-            think you could build next!
-          </p>
+        <div class="col-lg-8">
+          <p>Generate new sub-agents, architecture diagrams, better prompts, tests and new ideas.</p>
+          <div class="card">
+            <div class="card-header">
+              Gemini CLI
+            </div>
+            <div class="card-body">
+              <pre class="fs-5"><code>npm install -g @google/gemini-cli
+
+brew install gemini-cli
+
+gemini
+            </code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="alert alert-info">Create a GEMINI.md file with your preferences to inspire Gemini without having to prompt in the CLI every time.</div>
+          <br/>
+          <div class="text-center">
+            <a href="https://github.com/google-gemini/gemini-cli" target="_blank" class="btn btn-primary btn-lg">
+              Gemini CLI
+            </a>
+            <a href="https://github.com/vadimdemedes/ink" target="_blank" class="btn btn-secondary btn-lg">
+              INK CLI React Apps
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <div class="text-center">
-    <a href="https://gdg.community.dev/gdg-on-campus-the-university-of-manchester-manchester-united-kingdom/"
-      target="_blank">
-      <img src="./gdg.png" alt="UoM GDG Logo" class="img-fluid" />
-    </a>
-  </div>
+  <section id="thanks" class="section">
+    <div class="container">
+      <h2 class="mb-4">THANK YOU FOR JOINING GDG MANCHESTER!</h2>
+      <div class="text-center">
+        <a href="https://gdg.community.dev/gdg-on-campus-the-university-of-manchester-manchester-united-kingdom/"
+          target="_blank">
+          <img src="./gdg.png" alt="UoM GDG Logo" class="img-fluid" />
+        </a>
+      </div>
+    </div>
+  </section>
   <footer class="bg-dark text-light">
     <div class="container text-center">
       <p class="mb-1">&copy; 2025 UoM GDG · Agentic Architectures Workshop</p>

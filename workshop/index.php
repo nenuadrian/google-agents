@@ -60,7 +60,7 @@ function generate_file_snippets($file)
 <body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="80" tabindex="0">
 
   <!-- Navbar -->
-  <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav id="mainNavbar" class="navbar navbar-expand-lg bg-primary fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#top">UoM GDG · Agentic Architectures</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
@@ -241,7 +241,7 @@ adk run adk_research_assistant
           </div>
         </div>
         <div class="col-lg-4">
-          <p>20 requests / day limit on Free tier.</p>
+          <div class="alert alert-dismissible alert-info">20 requests / day limit on Free tier.</div>
           <a href="https://aistudio.google.com/api-keys" target="_blank" class="btn btn-primary btn-lg">
             Google AI Studio
           </a>
@@ -358,6 +358,7 @@ TO_ADDR="YOUR_EMAIL"</code></pre>
               GitHub Repository
             </a>
           </div>
+          <br/>
           <div class="card">
             <div class="card-header">
               Architecture

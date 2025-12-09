@@ -1,11 +1,11 @@
 import os
-
 from datetime import datetime
 from typing import Dict, List, Literal, TypedDict
 
-import arxiv
 from google.adk.agents.llm_agent import Agent
-from google.adk.tools import FunctionTool
+from google.adk.tools.function_tool import FunctionTool
+import arxiv
+
 
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 

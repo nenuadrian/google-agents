@@ -6,16 +6,16 @@ from email.mime.text import MIMEText
 import smtplib
 
 from google.adk.agents.llm_agent import Agent
-from google.adk.tools import FunctionTool
+from google.adk.tools.function_tool import FunctionTool
 
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 
 SMTP_DEFAULT_PORT = int(os.getenv("SMTP_DEFAULT_PORT", 587))
 SMTP_HOST = os.getenv("SMTP_HOST")
-SMTP_USERNAME = os.getenv("SMTP_USERNAME")
-SMTP_PASSWORD = os.getenv("SMTP_PASSWORD")
-FROM_ADDR = os.getenv("FROM_ADDR")
-TO_ADDR = os.getenv("TO_ADDR")
+SMTP_USERNAME = os.getenv("SMTP_USERNAME", "")
+SMTP_PASSWORD = os.getenv("SMTP_PASSWORD", "")
+FROM_ADDR = os.getenv("FROM_ADDR", "")
+TO_ADDR = os.getenv("TO_ADDR", "")
 
 
 @dataclass

@@ -2,7 +2,7 @@ import os
 from google.adk.agents.sequential_agent import SequentialAgent
 from google.adk.agents.parallel_agent import ParallelAgent
 from google.adk.agents.llm_agent import LlmAgent
-from google.adk.tools import google_search
+from google.adk.tools.google_search_tool import google_search
 
 from arxiv_agent import arxiv_research_agent
 from email_agent import email_agent

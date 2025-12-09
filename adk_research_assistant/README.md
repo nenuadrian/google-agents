@@ -2,11 +2,11 @@
 
 [![Python Build](https://github.com/nenuadrian/google-agents/actions/workflows/python-package.yml/badge.svg)](https://github.com/nenuadrian/google-agents/actions/workflows/python-package.yml)
 
-https://nenuadrian.com/uom/gdg/2025/workshop/
+[Workshop: https://nenuadrian.com/uom/gdg/2025/workshop/](https://nenuadrian.com/uom/gdg/2025/workshop/)
 
 ![image](./assets/example.png)
 
-## Agent Interaction and Data Flow
+## Architecture
 
 The research assistant operates as a sequential pipeline, orchestrating multiple agents to gather, synthesize, and deliver research information.
 
@@ -108,3 +108,7 @@ TO_ADDR="YOUR_EMAIL"
 ```bash
 pip install secure-smtplib
 ```
+
+## Custom Models
+
+[Custom Models Documentation](https://google.github.io/adk-docs/agents/models/#ollama-integration)
